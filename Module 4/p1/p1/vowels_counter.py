@@ -15,5 +15,5 @@ def main():
         if s[i] == 'a' or s[i] == 'e' or s[i] == 'i' or s[i] == 'o' or s[i] == 'u':
             j += 1
     print(str(j))
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
