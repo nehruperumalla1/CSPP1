@@ -8,11 +8,11 @@
 
 def main():
     '''Finding no.of Vowels'''
-    s = input()
-    l = len(s)
+    s_1 = input()
+    l_1 = len(s_1)
     j = 0
-    for i in range(0, l):
-        if s[i] == 'a' or s[i] == 'e' or s[i] == 'i' or s[i] == 'o' or s[i] == 'u':
+    for i in range(0, l_1):
+        if s_1[i] == 'a' or s_1[i] == 'e' or s_1[i] == 'i' or s_1[i] == 'o' or s_1[i] == 'u':
             j += 1
     print(str(j))
 if __name__ == "__main__":
