@@ -14,7 +14,7 @@ def main():
     while i<l-1:
         if s[i] == s1[j]:
             j += 1
-            if j == l1:
+            if j == l1-1:
                 c += 1
                 j = 0
                 i -= 1
