@@ -7,7 +7,7 @@ Number of times bob occurs is: 2'''
 
 def main():
     s = input()
-    s1 = input()
+    s1 = "bob"
     l=len(s)
     l1=len(s1)
     i,j,c = 0,0,0
