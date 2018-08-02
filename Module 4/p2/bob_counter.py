@@ -8,10 +8,10 @@ Number of times bob occurs is: 2'''
 def main():
     s = input()
     s1 = "bob"
-    l=len(s)
-    l1=len(s1)
-    i,j,c = 0,0,0
-    while i<l-1:
+    l = len(s)
+    l1 = len(s1)
+    i, j, c = 0, 0, 0
+    while i < l-1:
         if s[i] == s1[j]:
             j += 1
             if j == l1-1:
@@ -20,5 +20,5 @@ def main():
                 i -= 1
         i += 1
     print(c)
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
