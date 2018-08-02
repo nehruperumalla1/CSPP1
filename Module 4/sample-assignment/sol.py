@@ -8,7 +8,7 @@ def main():
     data = input()
     print(int(data[0])+int(data[1]))
     for i in range(1, data):
-        data=data*i
+        data = data*i
 print(data)
 if __name__ == "__main__":
     main()
