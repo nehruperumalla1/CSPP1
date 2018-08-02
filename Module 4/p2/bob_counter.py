@@ -9,13 +9,13 @@ def main():
     '''Counting no.of bob in given in string'''
     main_str = input()
     sub_str = "bob"
-    l = len(main_str)
-    l1 = len(sub_str)
+    length_main = len(main_str)
+    length_sub = len(sub_str)
     i, j, c = 0, 0, 0
-    while i < l-1:
+    while i < length_main-1:
         if main_str[i] == sub_str[j]:
             j += 1
-            if j == l1-1:
+            if j == length_sub-1:
                 c += 1
                 j = 0
                 i -= 1
