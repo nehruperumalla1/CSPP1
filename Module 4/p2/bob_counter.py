@@ -7,13 +7,13 @@ Number of times bob occurs is: 2'''
 
 def main():
     '''Counting no.of bob in given in string'''
-    s = input()
-    s1 = "bob"
-    l = len(s)
-    l1 = len(s1)
+    main_str = input()
+    sub_str = "bob"
+    l = len(main_str)
+    l1 = len(sub_str)
     i, j, c = 0, 0, 0
     while i < l-1:
-        if s[i] == s1[j]:
+        if main_str[i] == sub_str[j]:
             j += 1
             if j == l1-1:
                 c += 1
