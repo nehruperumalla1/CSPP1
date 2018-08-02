@@ -12,6 +12,6 @@ def main():
 	for i in range(0,l):
 		if s[i]=='a' or s[i]=='e' or s[i]=='i' or s[i]=='o' or s[i]=='u':
 			j += 1
-	print("Total No.of Vowels: "+str(j))
+	print(str(j))
 if __name__== "__main__":
 	main()
