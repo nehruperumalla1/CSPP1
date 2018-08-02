@@ -12,7 +12,7 @@ def main():
     index = str1.find("bob")
     while index >= 0:
         count = count+1
-        index = str1.find("bob",index+2)
+        index = str1.find("bob", index+2)
     print(count)
 if __name__ == "__main__":
     main()
