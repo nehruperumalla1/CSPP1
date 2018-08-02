@@ -5,7 +5,7 @@
 # This function takes in one number and returns one number.
 
 def main():
-    data = input()
+    data = input().split(",")
     print(int(data[0])+int(data[1]))
 
 if __name__ == "__main__":
