@@ -6,6 +6,7 @@ occurs in s. For example, if s = 'azcbobobegghakl', then your program should pri
 Number of times bob occurs is: 2'''
 
 def main():
+    '''Counting no.of bob in given in string'''
     s = input()
     s1 = "bob"
     l = len(s)
