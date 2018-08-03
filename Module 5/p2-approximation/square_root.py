@@ -13,7 +13,7 @@ def main():
 	numb = int(input())
 	epsilon = 0.01
 	step = 0.0
-	inc = 0.0001
+	inc = 0.1
 	while abs(step**2 - numb)>=epsilon:
 		step += inc
 	if abs(step**2 - numb) >= epsilon:
