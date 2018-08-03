@@ -19,7 +19,7 @@ def main():
 	i, j, temp1, temp2 = 0, 0, 0, 0
 	len_main = len(main)
 	while i < len_main-1:
-		if main[i] == main[i+1]:
+		if main[i] <= main[i+1]:
 			temp1 += 1
 			if temp1 > temp2:
 				temp2 = temp1
