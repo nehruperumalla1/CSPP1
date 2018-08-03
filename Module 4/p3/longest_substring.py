@@ -15,20 +15,21 @@ If you've spent more than a few hours on this problem, we suggest that you move 
 If you have time, come back to this problem after you've had a break and cleared your head.'''
 
 def main():
-	main = input()
-	i, j, temp1, temp2 = 0, 0, 0, 0
-	len_main = len(main)
-	while i < len_main-1:
-		if main[i] <= main[i+1]:
-			temp1 += 1
-			if temp1 > temp2:
-				temp2 = temp1
-				j = i+1
-		else:
-			temp1 = 0
-		i += 1
-	string = j-temp2
-	print(main[string:j+1])
+    '''Alphabet Sequence in a given String'''
+    main = input()
+    i, j, temp1, temp2 = 0, 0, 0, 0
+    len_main = len(main)
+    while i < len_main-1:
+        if main[i] <= main[i+1]:
+            temp1 += 1
+            if temp1 > temp2:
+                temp2 = temp1
+                j = i+1
+        else:
+            temp1 = 0
+        i += 1
+    string = j-temp2
+    print(main[string:j+1])
 
 if __name__== "__main__":
-	main()
+    main()
