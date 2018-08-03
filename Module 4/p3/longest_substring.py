@@ -24,8 +24,8 @@ def main():
 			if temp1 > temp2:
 				temp2 = temp1
 				j = i+1
-			else:
-				temp1 = 0
+		else:
+			temp1 = 0
 		i += 1
 	string = j-temp2
 	print(main[string:j+1])
