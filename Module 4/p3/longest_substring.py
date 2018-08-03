@@ -20,7 +20,7 @@ def main():
     '''Alphabet Sequence in a given String'''
     str1 = input()
     i, j, temp1, temp2 = 0, 0, 0, 0
-    len_main = len(str1)
+    len_str1 = len(str1)
     while i < len_str1-1:
         if str1[i] <= str1[i+1]:
             temp1 += 1
