@@ -5,11 +5,10 @@ Output has three spaces, which are to be replaced with these special characters
 '''
 def main():
     '''
-    Enter a string includes special characters, this will display special charcaters 
+    Enter a string includes special characters, this will display special charcaters
     replaced with spaces
     '''
     str_input = input()
-    length = len(str_input)
     d_1 = ''
     for i in str_input:
         if i in "!@#$%^&*":
