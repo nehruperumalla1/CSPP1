@@ -29,7 +29,7 @@
 
 
 def payingdebtoffinayear(balance, annualinterestrate):
-	'''Lowest Payment'''
+    '''Lowest Payment'''
     i_bal = balance
     minfixedmonthlypayment = 10
     monthlyinterestrate = annualinterestrate/12
@@ -46,7 +46,7 @@ def payingdebtoffinayear(balance, annualinterestrate):
     return minfixedmonthlypayment-10
 
 def main():
-	'''Lowest Payment main function'''
+    '''Lowest Payment'''
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
