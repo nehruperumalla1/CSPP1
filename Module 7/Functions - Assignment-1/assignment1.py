@@ -31,18 +31,18 @@
 
 def payingDebtOffInAYear(balance, annualinterestrate, monthlypaymentrate):
     for i in range(12):
-        monthlyinterestrate = annualinterestrate/12
-        minmonthlypayment = monthlypaymentrate*balance
-        monthlyunpaidbalance = balance-minmonthlypayment
-        balance = monthlyunpaidbalance+(monthlyinterestrate*monthlyunpaidbalance)
-    print("Remaining balance: "+str(round(balance,2)))
+        monthlyinterestrate = annualinterestrate / 12
+        minmonthlypayment = monthlypaymentrate * balance
+        monthlyunpaidbalance = balance - minmonthlypayment
+        balance = monthlyunpaidbalance + (monthlyinterestrate * monthlyunpaidbalance)
+    print("Remaining balance: " + str(round(balance, 2)))
     
 
 def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    payingDebtOffInAYear(data[0],data[1],data[2])
+    payingDebtOffInAYear(data[0], data[1], data[2])
 
 if __name__== "__main__":
     main()
