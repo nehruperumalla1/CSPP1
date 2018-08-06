@@ -29,12 +29,12 @@
 #Monthly unpaid balance)
 
 
-def payingDebtOffInAYear(balance, annualInterest_Rate, monthlyPayment_Rate):
+def payingDebtOffInAYear(balance, annualinterestrate, monthlypaymentrate):
     for i in range(12):
-        monthlyInterest_Rate = annualInterest_Rate/12
-        minMonthly_Payment = monthlyPayment_Rate*balance
-        monthlyUnpaid_Balance = balance-minMonthly_Payment
-        balance = monthlyUnpaid_Balance+(monthlyInterest_Rate*monthlyUnpaid_Balance)
+        monthlyinterestrate = annualinterestrate/12
+        minmonthlypayment = monthlypaymentrate*balance
+        monthlyunpaidbalance = balance-minmonthlypayment
+        balance = monthlyunpaidbalance+(monthlyinterestrate*monthlyunpaidbalance)
     print("Remaining balance: "+str(round(balance,2)))
     
 
