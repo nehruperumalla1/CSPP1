@@ -27,10 +27,10 @@
 
 def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):
 	for i in range(12):
-		monthlyInterestRate=annualInterestRate/12
-		minMonthlyPayment=monthlyPaymentRate*balance
-		monthlyUnpaidBalance=balance-minMonthlyPayment
-		balance=monthlyUnpaidBalance+(monthlyInterestRate*monthlyUnpaidBalance)
+		monthlyInterestRate = annualInterestRate/12
+		minMonthlyPayment = monthlyPaymentRate*balance
+		monthlyUnpaidBalance = balance-minMonthlyPayment
+		balance = monthlyUnpaidBalance+(monthlyInterestRate*monthlyUnpaidBalance)
 	print(round(balance,2))
 	
 
