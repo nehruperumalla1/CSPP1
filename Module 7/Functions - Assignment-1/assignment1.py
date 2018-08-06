@@ -38,6 +38,7 @@ def payingdebtoffinayear(balance, annualinterestrate, monthlypaymentrate):
         balance = monthlyunpaidbalance + (monthlyinterestrate * monthlyunpaidbalance)
     print("Remaining balance: " + str(round(balance, 2)))
 def main():
+    '''Main Fuction to display balance'''
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
@@ -45,4 +46,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
