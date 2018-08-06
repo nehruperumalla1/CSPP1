@@ -29,27 +29,27 @@
 
 
 
-def payingDebtOffInAYear(balance, annualInterestRate):
+def payingdebtoffinayear(balance, annualinterestrate):
     i_bal = balance
-    MinFixedMonthlyPayment = 10
-    MonthlyInterestRate = annualInterestRate/12
-    MonthlyUnpaidBalance = balance
+    minfixedmonthlypayment = 10
+    monthlyinterestrate = annualinterestrate/12
+    monthlyunpaidbalance = balance
     while balance > 0:
         balance = i_bal
         month = 0
         while month < 12:
-            MonthlyUnpaidBalance = balance - MinFixedMonthlyPayment
-            balance = MonthlyUnpaidBalance+(MonthlyInterestRate*MonthlyUnpaidBalance)
+            monthlyunpaidbalance = balance - minfixedmonthlypayment
+            balance = monthlyunpaidbalance+(monthlyinterestrate*monthlyunpaidbalance)
             month += 1
-        MinFixedMonthlyPayment += 10
-    # print(MinFixedMonthlyPayment-10)
-    return MinFixedMonthlyPayment-10
+        minfixedmonthlypayment += 10
+    # print(Minfixedmonthlypayment-10)
+    return minfixedmonthlypayment-10
 
 def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print("Lowest Payment: "+str(payingDebtOffInAYear(data[0],data[1])))
+    print("Lowest Payment: "+str(payingdebtoffinayear(data[0], data[1])))
     
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
