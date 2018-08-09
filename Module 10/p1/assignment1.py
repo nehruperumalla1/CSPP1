@@ -14,7 +14,7 @@ def get_available_letters(letters_guessed):
     '''
     import string
     remaining = []
-    letters=string.ascii_lowercase
+    letters = string.ascii_lowercase
     remaining = [index for index in letters if index not in letters_guessed]
     return ''.join(remaining)
 
