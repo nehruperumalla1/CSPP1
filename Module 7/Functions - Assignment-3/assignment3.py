@@ -13,7 +13,7 @@ def debt_topay(balance_amount, ann_interest_rate, amount):
     return balance_amount_temp
 
 def payingdebtoffinayear(balance, annual_interestrate):
-    '''Function'''
+    '''Function for debt in year'''
     balance_amount_temp = balance
     approx_amnt = 0.03
     month_intr = annual_interestrate/12.0
