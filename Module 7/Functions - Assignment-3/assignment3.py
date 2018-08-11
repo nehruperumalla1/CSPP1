@@ -1,4 +1,4 @@
-# Functions - Assignment-3 - Using Bisection Search to Make the Program Faster
+'''Functions - Assignment-3 - Using Bisection Search to Make the Program Faster'''
 
 # value as you did in Assignment 2.
 
