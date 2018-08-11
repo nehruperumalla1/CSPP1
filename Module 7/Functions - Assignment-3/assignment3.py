@@ -3,6 +3,7 @@
 # value as you did in Assignment 2.
 
 def debt_topay(balance_amount, ann_interest_rate, amount):
+	'''Function for debt to pay'''
     balance_amount_temp = balance_amount
     index = 1
     while index <= 12:
