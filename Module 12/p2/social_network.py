@@ -30,7 +30,7 @@ def unfollow(network, arg1, arg2):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    # del.network[arg1] = 
+    network.pop('arg2','arg1')
     pass
 
 def delete_person(network, arg1):
