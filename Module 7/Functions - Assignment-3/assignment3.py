@@ -38,7 +38,7 @@
 def debt_topay(balance_amount, ann_interest_rate, amount):
     balance_amount_temp = balance_amount
     index = 1
-    while i <= 12:
+    while index <= 12:
         month_intr = ann_interest_rate/12
         month_up_bal = balance_amount_temp - amount
         balance_amount_temp = month_up_bal + (month_intr*month_up_bal)
@@ -48,7 +48,7 @@ def debt_topay(balance_amount, ann_interest_rate, amount):
 def payingDebtOffInAYear(balance, annual_interestrate):
 
     balance_amount_temp = balance
-    approx_amnt = 0.03
+    approx_amn = 0.03
     month_intr = annual_interestrate/12.0
     high = (balance*(1+month_intr)**12)/12.0
     low = balance/12
