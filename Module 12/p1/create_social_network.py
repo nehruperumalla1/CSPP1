@@ -45,11 +45,11 @@ def create_social_network(data,times):
     #print(data)
     for i in range(len(data)-1):
 
-        k, v = data[i].split(' follows ')
+        key, val = data[i].split(' follows ')
         #print(k, v)
-        v = v.split(',')
+        val = val.split(',')
         #print(k, v)
-        adict[k] = v
+        adict[key] = val
     return adict
 
 def main():
@@ -62,7 +62,7 @@ def main():
         index += 1
         string += input()
         string +='\n'
-    print(create_social_network(string,lines))
+    print(create_social_network(string, lines))
 
 if __name__ == "__main__":
     main()
