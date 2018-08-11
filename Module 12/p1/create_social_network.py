@@ -2,7 +2,7 @@
     Assignment-1 Create Social Network
 '''
 
-def create_social_network(data,times):
+def create_social_network(data):
     '''
         The data argument passed to the function is a string
         It represents simple social network data
@@ -37,8 +37,8 @@ def create_social_network(data,times):
     data1 = data.split()
     flag = 1
     for index in data1:
-        if index =='follows':
-            flag=0
+        if index == 'follows':
+            flag = 0
     if flag == 1:
         return adict
     data = data.split('\n')
@@ -61,8 +61,8 @@ def main():
     for index in range(lines):
         index += 1
         string += input()
-        string +='\n'
-    print(create_social_network(string, lines))
+        string += '\n'
+    print(create_social_network(string))
 
 if __name__ == "__main__":
     main()
