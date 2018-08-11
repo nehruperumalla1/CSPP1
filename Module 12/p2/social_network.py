@@ -14,9 +14,9 @@ def follow(network, arg1, arg2):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    adict={}
-    adict[arg2]=arg1
-    return adict
+    #adict={}
+    network[arg2]=arg1
+    return network
 
     pass
 
@@ -30,6 +30,7 @@ def unfollow(network, arg1, arg2):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
+    # del.network[arg1] = 
     pass
 
 def delete_person(network, arg1):
@@ -43,6 +44,7 @@ def delete_person(network, arg1):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
+    del.network[arg1]
     pass
 
 def main():
