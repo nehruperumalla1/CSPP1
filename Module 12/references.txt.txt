@@ -1,0 +1,4 @@
+1. https://stackoverflow.com/questions/1059559/split-strings-with-multiple-delimiters
+2. https://stackoverflow.com/questions/17144889/how-to-convert-this-list-into-dictionary-in-python
+3. https://stackoverflow.com/questions/32954469/delete-values-of-a-key-and-keep-the-key
+4. https://stackoverflow.com/questions/11277432/how-to-remove-a-key-from-a-python-dictionary
