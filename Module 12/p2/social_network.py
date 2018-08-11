@@ -15,7 +15,7 @@ def follow(network, arg1, arg2):
     '''
     # remove the pass below and start writing your code
     #adict={}
-    network[arg2]=arg1
+    network[arg2] = arg1
     return network
 
     pass
@@ -54,8 +54,8 @@ def main():
     '''
     network = eval(input())
     lines = int(input())
-    for i in range(lines):
-        i += 1
+    for index in range(lines):
+        index += 1
         line = input()
         output = line.split(" ")
         if output[0] == "follow":
