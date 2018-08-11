@@ -12,7 +12,7 @@ def debt_topay(balance_amount, ann_interest_rate, amount):
         index = index+1
     return balance_amount_temp
 
-def payingbebtOffinayear(balance, annual_interestrate):
+def payingbebtoffinayear(balance, annual_interestrate):
 
     balance_amount_temp = balance
     approx_amnt = 0.03
