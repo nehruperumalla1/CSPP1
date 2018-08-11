@@ -34,9 +34,17 @@ def create_social_network(data,times):
 
     # remove the pass below and start writing your code
     adict={}
+    d=data.split()
+    flag=1
+    for i in d:
+    	if i =='follows':
+    		flag=0
+    if flag==1:
+    	return adict
     data = data.split('\n')
     #print(data)
     for i in range(len(data)-1):
+    	
     	k, v=data[i].split(' follows ')
     	#print(k, v)
     	v=v.split(',')
@@ -54,7 +62,6 @@ def main():
         i += 1
         string += input()
         string +='\n'
-
     print(create_social_network(string,lines))
 
 if __name__ == "__main__":
