@@ -12,7 +12,7 @@ def debt_topay(balance_amount, ann_interest_rate, amount):
         index = index+1
     return balance_amount_temp
 
-def payingDebtOffInAYear(balance, annual_interestrate):
+def payingbebtOffinayear(balance, annual_interestrate):
 
     balance_amount_temp = balance
     approx_amnt = 0.03
@@ -34,6 +34,6 @@ def main():
     # data = "4773 0.2"
     data = data.split(' ')
     data = list(map(float, data))
-    print(payingDebtOffInAYear(data[0],data[1]))
+    print(payingdebtoffinayear(data[0],data[1]))
 if __name__== "__main__":
     main()
