@@ -35,8 +35,6 @@ def is_straight(hand):
     if count == len(hand)-1:
         return True
     return False
-
-    
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
