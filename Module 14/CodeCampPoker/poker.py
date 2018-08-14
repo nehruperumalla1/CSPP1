@@ -34,8 +34,7 @@ def is_straight(hand):
             count += 1
     if count == len(hand)-1:
         return True
-    else:
-        return False
+    return False
 
     
 def is_flush(hand):
