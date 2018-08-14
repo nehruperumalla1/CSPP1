@@ -15,7 +15,7 @@ def is_straight(hand):
 '''
     y=[]
     for index in range(len(hand)):
-        if hand[index] == 'T':
+        if hand[index][0] == 'T':
             y.append(10)
         elif hand[index] == 'J':
             y.append(11)
