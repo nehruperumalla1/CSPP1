@@ -15,27 +15,27 @@ def is_straight(hand):
 '''
     y=[]
     for index in range(len(hand)):
-    	if hand[index] == 'T':
-    		y.append(10)
-    	elif hand[index] == 'J':
-    		y.append(11)
-    	elif hand[index][0] == 'Q':
-    		y.append(12)
-    	elif hand[index][0] == 'K':
-    		y.append(13)
-    	elif hand[index][0] == 'A':
-    		y.append(14)
-    	else:
-    		y.append(int(hand[index][0]))
+        if hand[index] == 'T':
+            y.append(10)
+        elif hand[index] == 'J':
+            y.append(11)
+        elif hand[index][0] == 'Q':
+            y.append(12)
+        elif hand[index][0] == 'K':
+            y.append(13)
+        elif hand[index][0] == 'A':
+            y.append(14)
+        else:
+            y.append(int(hand[index][0]))
     count = 0
     y.sort()
     for index in range(len(hand)-1):
-    	if y[index] == y[index+1]-1:
-    		count += 1
+        if y[index] == y[index+1]-1:
+            count += 1
     if count == len(hand)-1:
-    	return True
+        return True
     else:
-    	return False
+        return False
 
     
 def is_flush(hand):
@@ -48,8 +48,8 @@ def is_flush(hand):
         Write the code for it and return True if it is a flush else return False
     '''
     for index in range(len(hand)-1):
-    	if hand[index][1] != hand[index+1][1]:
-    		return False
+        if hand[index][1] != hand[index+1][1]:
+            return False
     return True
 def hand_rank(hand):
     '''
@@ -76,13 +76,13 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     # if is_straight(hand) and is_flush(hand):
-    # 	return
+    #   return
     if is_straight(hand) and is_flush(hand):
-    	return 3
+        return 3
     if is_flush(hand):
-    	return 2
+        return 2
     if is_straight(hand):
-    	return 1
+        return 1
     return 0
 
 def poker(hands):
