@@ -4,7 +4,7 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 def func1(hand):
-	'''Function call for one/two pair'''
+    '''Function call for one/two pair'''
     st = '--23456789TJQKA'
     rank_list = [num for num in st]
     #print(rank_list)
@@ -13,19 +13,19 @@ def func1(hand):
         set1.add(rank_list.index(num))
     return set1
 def is_onepair(hand):
-	'''Function for One pair'''
+    '''Function for One pair'''
     set1 = func1(hand)
     if len(set1) == 4:
         return True
     return False
 def is_twopair(hand):
-	'''Function for twopair'''
+    '''Function for twopair'''
     set1 = func1(hand)
     if len(set1) == 3:
         return True
     return False
 def three_four(hand):
-	'''Function call for Three/four kind, full house'''
+    '''Function call for Three/four kind, full house'''
     length = len(hand)
     yaar = []
     for index in range(length):
@@ -56,25 +56,25 @@ def three_four(hand):
         jindex += 1
     return counter
 def three_kind(hand):
-	'''Function for three kind'''
+    '''Function for three kind'''
     counter = three_four(hand)
     counter = max(counter)
     if counter == 3:
         return True
     return False
 def four_kind(hand):
-	'''Function for four_kind'''
+    '''Function for four_kind'''
     counter = three_four(hand)
     counter = max(counter)
     if counter == 4:
         return True
     return False
 def fullhouse(hand):
-	'''Function for FullHouse'''
+    '''Function for FullHouse'''
     counter = three_four(hand)
     if 3 in counter:
-    	if 2 in counter:
-        	return True
+        if 2 in counter:
+            return True
     return False
 
 def is_straight(hand):
