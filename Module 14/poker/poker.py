@@ -9,7 +9,7 @@ def func1(hand):
     rank_list = [num for num in string]
     #print(rank_list)
     set1 = set()
-    for num, suite in hand:
+    for num, _ in hand:
         set1.add(rank_list.index(num))
     return set1
 def is_onepair(hand):
@@ -43,9 +43,9 @@ def three_four(hand):
             yaar.append(int(hand[index][0]))
     yaar.sort()
     yaarcopy = yaar.copy()
-    counter=[]
+    counter = []
     jindex = 0
-    while jindex < len(yaar) :
+    while jindex < len(yaar):
         count = 0
         temp = yaar[jindex]
         for item in yaarcopy:
