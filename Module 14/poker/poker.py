@@ -50,7 +50,7 @@ def three_four(hand):
         yaarcopy.remove(yaar[jindex])
         counter.append(count)
         jindex += 1
-    return c
+    return counter
 def three_kind(hand):
     counter = three_four(hand)
     counter = max(counter)
