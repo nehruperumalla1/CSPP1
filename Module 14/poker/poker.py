@@ -50,6 +50,7 @@ def three_four(hand):
         yaarcopy.remove(yaar[j])
         c.append(count)
         j += 1
+    print(c)
     return c
 def three_kind(hand):
     s = three_four(hand)
@@ -65,8 +66,9 @@ def four_kind(hand):
     return False
 def fullhouse(hand):
     s = three_four(hand)
-    if 3 and 2 in s:
-        return True
+    if 3 in s:
+    	if 2 in s:
+        	return True
     return False
 
 def is_straight(hand):
@@ -142,23 +144,22 @@ def hand_rank(hand):
     # if is_straight(hand) and is_flush(hand):
     #   return
     if fullhouse(hand):
-        return 8
-    if four_kind(hand):
         return 7
-    if three_kind(hand):
-        return 6
-    if is_twopair(hand):
-        return 5
-    if is_onepair(hand):
+    if four_kind(hand):
         return 4
-    if is_straight(hand) and is_flush(hand):
+    if three_kind(hand):
         return 3
-    if is_flush(hand):
+    if is_twopair(hand):
         return 2
-    if is_straight(hand):
+    if is_onepair(hand):
         return 1
+    if is_straight(hand) and is_flush(hand):
+        return 8
+    if is_flush(hand):
+        return 6
+    if is_straight(hand):
+        return 5
     return 0
-
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
