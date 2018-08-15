@@ -50,7 +50,6 @@ def three_four(hand):
         yaarcopy.remove(yaar[j])
         c.append(count)
         j += 1
-    print(c)
     return c
 def three_kind(hand):
     s = three_four(hand)
