@@ -5,8 +5,8 @@
 '''
 def func1(hand):
     '''Function call for one/two pair'''
-    st = '--23456789TJQKA'
-    rank_list = [num for num in st]
+    string = '--23456789TJQKA'
+    rank_list = [num for num in string]
     #print(rank_list)
     set1 = set()
     for num, suite in hand:
