@@ -7,18 +7,18 @@ def func1(hand):
     st = '--23456789TJQKA'
     rank_list = [num for num in st]
     #print(rank_list)
-    s = set()
+    set1 = set()
     for num, suite in hand:
-        s.add(rank_list.index(num))
-    return s
+        set1.add(rank_list.index(num))
+    return set1
 def is_onepair(hand):
-    s = func1(hand)
-    if len(s) == 4:
+    set1 = func1(hand)
+    if len(set1) == 4:
         return True
     return False
 def is_twopair(hand):
-    s = func1(hand)
-    if len(s) == 3:
+    set1 = func1(hand)
+    if len(set1) == 3:
         return True
     return False
 def three_four(hand):
@@ -39,34 +39,34 @@ def three_four(hand):
             yaar.append(int(hand[index][0]))
     yaar.sort()
     yaarcopy = yaar.copy()
-    c=[]
-    j = 0
-    while j < len(yaar) :
+    counter=[]
+    jindex = 0
+    while jindex < len(yaar) :
         count = 0
-        temp = yaar[j]
+        temp = yaar[jindex]
         for item in yaarcopy:
             if temp == item:
                 count += 1
-        yaarcopy.remove(yaar[j])
-        c.append(count)
-        j += 1
+        yaarcopy.remove(yaar[jindex])
+        counter.append(count)
+        jindex += 1
     return c
 def three_kind(hand):
-    s = three_four(hand)
-    s = max(s)
-    if s == 3:
+    counter = three_four(hand)
+    counter = max(counter)
+    if counter == 3:
         return True
     return False
 def four_kind(hand):
-    s = three_four(hand)
-    s = max(s)
-    if s == 4:
+    counter = three_four(hand)
+    counter = max(counter)
+    if counter == 4:
         return True
     return False
 def fullhouse(hand):
-    s = three_four(hand)
-    if 3 in s:
-    	if 2 in s:
+    counter = three_four(hand)
+    if 3 in counter:
+    	if 2 in counter:
         	return True
     return False
 
