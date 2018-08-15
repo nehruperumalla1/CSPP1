@@ -165,7 +165,7 @@ def hand_rank(hand):
         return 6
     if is_straight(hand):
         return 5
-    return 0
+    # return 0
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
