@@ -133,12 +133,12 @@ def is_flush(hand):
         Write the code for it and return True if it is a flush else return False
     '''
     l = []
-    for num,suite in hand:
+    for _, suite in hand:
         l.append(suite)
         # if hand[index][1] != hand[index+1][1]:
         #     return False
-    s = set(l)
-    return len(s) == 1 
+    set1 = set(l)
+    return len(set1) == 1 
 
 def high_card(hand):
     ''' It returns the value of High Hand'''
