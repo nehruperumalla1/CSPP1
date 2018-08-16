@@ -14,10 +14,10 @@ def func1(hand):
     for num, _ in hand:
         set1.add(rank_list.index(num))
     return set1
-def no_pair(hand):
-    set1 = func1(hand)
-    if len(set1) == 5:
-        max(set1)
+# def no_pair(hand):
+#     set1 = func1(hand)
+#     if len(set1) == 5:
+#         max(set1)
         #s = highcard(hand)
 def is_onepair(hand):
     '''Function for One pair'''
