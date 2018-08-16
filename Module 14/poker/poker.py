@@ -3,15 +3,15 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-adict = {}
-def result(rank, hand):
-    global adict
-    if rank not in adict:
-        adict[rank] = [hand]
-    else:
-        adict[rank].append(hand)
-    print(adict)    
-    return adict
+# adict = {}
+# def result(rank, hand):
+#     global adict
+#     if rank not in adict:
+#         adict[rank] = [hand]
+#     else:
+#         adict[rank].append(hand)
+#     print(adict)    
+#     return adict
 def func1(hand):
     '''Function call for one/two pair'''
     string = '--23456789TJQKA'
@@ -172,29 +172,29 @@ def hand_rank(hand):
     # if is_straight(hand) and is_flush(hand):
     #   return
     if is_straight(hand) and is_flush(hand):
-        print(result(8, hand))
+        #print(result(8, hand))
         #print(adict)
         return 8
     if four_kind(hand):
-        result(7, hand)
+        #result(7, hand)
         return 7
     if fullhouse(hand):
-        result(6, hand)
+        #result(6, hand)
         return 6
     if is_flush(hand):
-        result(5, hand)
+        #result(5, hand)
         return 5
     if is_straight(hand):
-        result(4, hand)
+        #result(4, hand)
         return 4
     if three_kind(hand):
-        result(3, hand)
+        #result(3, hand)
         return 3
     if is_twopair(hand):
-        result(2, hand)
+        #result(2, hand)
         return 2
     return is_onepair(hand)
-        result(1, hand)
+        #result(1, hand)
         return 1
     return high_card(hand)
 
