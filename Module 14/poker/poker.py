@@ -140,7 +140,7 @@ def is_flush(hand):
 def high_card(hand):
     set1 = func1(hand)
     if len(set1) == 5 and not is_flush(hand):
-        return max(set1)
+        return max(set1)/100
     return False
 
 def hand_rank(hand):
@@ -173,28 +173,28 @@ def hand_rank(hand):
     if is_straight(hand) and is_flush(hand):
         #print(result(8, hand))
         #print(adict)
-        return 8
+        return 0
     if four_kind(hand):
         #result(7, hand)
-        return 7
+        return 1
     if fullhouse(hand):
         #result(6, hand)
-        return 6
+        return 2
     if is_flush(hand):
         #result(5, hand)
-        return 5
+        return 3
     if is_straight(hand):
         #result(4, hand)
         return 4
     if three_kind(hand):
         #result(3, hand)
-        return 3
+        return 5
     if is_twopair(hand):
         #result(2, hand)
-        return 2
+        return 6
     if is_onepair(hand):
         #result(1, hand)
-        return 1
+        return 7
     return high_card(hand)
 
     #return high_card(hand) and not (is_straight(hand) and is_flush(hand)) and not (four_kind(hand)) and not (fullhouse(hand))
@@ -216,7 +216,7 @@ def poker(hands):
     # hand_rank is a function passed to max
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
-    return max(hands, key=hand_rank)
+    return min(hands, key=hand_rank)
 
 if __name__ == "__main__":
     # read the number of test cases
