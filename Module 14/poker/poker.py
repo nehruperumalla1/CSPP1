@@ -193,7 +193,7 @@ def hand_rank(hand):
     if is_twopair(hand):
         result(2, hand)
         return 2
-    return is_onepair(hand):
+    return is_onepair(hand)
         result(1, hand)
         return 1
     return high_card(hand)
