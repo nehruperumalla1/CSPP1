@@ -27,9 +27,9 @@ def is_onepair(hand):
     rank_list = [num for num in string]
     #print(rank_list)
     set1 = set()
-    l = []
+    list1 = []
     for num, _ in hand:
-        l.append(rank_list.index(num))
+        list1.append(rank_list.index(num))
         set1.add(rank_list.index(num))
     if len(set1) == 4:
         #print(l)
