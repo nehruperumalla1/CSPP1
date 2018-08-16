@@ -150,9 +150,9 @@ def hand_rank(hand):
     # if is_straight(hand) and is_flush(hand):
     #   return
     if fullhouse(hand):
-        return 7
+        return 6
     if four_kind(hand):
-        return 4
+        return 7
     if three_kind(hand):
         return 3
     if is_twopair(hand):
@@ -162,9 +162,9 @@ def hand_rank(hand):
     if is_straight(hand) and is_flush(hand):
         return 8
     if is_flush(hand):
-        return 6
-    if is_straight(hand):
         return 5
+    if is_straight(hand):
+        return 4
     return 0
 def poker(hands):
     '''
