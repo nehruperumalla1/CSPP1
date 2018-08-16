@@ -195,7 +195,6 @@ def hand_rank(hand):
         return 2
     return is_onepair(hand)
         #result(1, hand)
-        return 1
     return high_card(hand)
 
     #return high_card(hand) and not (is_straight(hand) and is_flush(hand)) and not (four_kind(hand)) and not (fullhouse(hand))
