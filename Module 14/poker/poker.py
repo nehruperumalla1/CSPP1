@@ -198,8 +198,6 @@ def hand_rank(hand):
         return is_onepair(hand)
         #result(1, hand)
     return high_card(hand)
-
-    #return high_card(hand) and not (is_straight(hand) and is_flush(hand)) and not (four_kind(hand)) and not (fullhouse(hand))
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
