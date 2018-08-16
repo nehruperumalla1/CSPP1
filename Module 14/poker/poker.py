@@ -52,15 +52,9 @@ def three_four(hand):
     yaarcopy = yaar.copy()
     counter = []
     jindex = 0
-    while jindex < len(yaar):
-        count = 0
-        temp = yaar[jindex]
-        for item in yaarcopy:
-            if temp == item:
-                count += 1
-        yaarcopy.remove(yaar[jindex])
-        counter.append(count)
-        jindex += 1
+    set1 = set(yaar)
+    for jindex in set1:
+        counter.append(yaar.count(jindex))
     return counter
 def three_kind(hand):
     '''Function for three kind'''
