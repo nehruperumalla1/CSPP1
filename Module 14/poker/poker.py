@@ -34,7 +34,7 @@ def is_onepair(hand):
     if len(set1) == 4:
         #print(l)
         for index in set1:
-            if l.count(index) == 2:
+            if list1.count(index) == 2:
                 return index/10
     return 100
 def is_twopair(hand):
