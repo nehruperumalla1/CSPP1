@@ -139,7 +139,8 @@ def is_flush(hand):
 
 def high_card(hand):
     set1 = func1(hand)
-    if len(set1) == 5:
+    set2 = is_flush(hand)
+    if len(set1) == 5 and len(set2) != 5:
         return max(set1)
     return False
 
