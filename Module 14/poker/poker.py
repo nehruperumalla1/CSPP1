@@ -174,25 +174,25 @@ def hand_rank(hand):
         #print(result(8, hand))
         #print(adict)
         return 8
-    if four_kind(hand):
+    elif four_kind(hand):
         #result(7, hand)
         return 7
-    if fullhouse(hand):
+    elif fullhouse(hand):
         #result(6, hand)
         return 6
-    if is_flush(hand):
+    elif is_flush(hand):
         #result(5, hand)
         return 5
-    if is_straight(hand):
+    elif is_straight(hand):
         #result(4, hand)
         return 4
-    if three_kind(hand):
+    elif three_kind(hand):
         #result(3, hand)
         return 3
-    if is_twopair(hand):
+    elif is_twopair(hand):
         #result(2, hand)
         return 2
-    if is_onepair(hand):
+    elif is_onepair(hand):
         #result(1, hand)
         return 1
     else:
