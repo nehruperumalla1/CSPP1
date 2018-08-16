@@ -3,6 +3,8 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
+
+
 def func1(hand):
     '''Function call for one/two pair'''
     string = '--23456789TJQKA'
@@ -12,6 +14,11 @@ def func1(hand):
     for num, _ in hand:
         set1.add(rank_list.index(num))
     return set1
+def no_pair(hand):
+    set1 = func1(hand)
+    if len(set1) == 5:
+        max(set1)
+        #s = highcard(hand)
 def is_onepair(hand):
     '''Function for One pair'''
     set1 = func1(hand)
@@ -149,22 +156,23 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     # if is_straight(hand) and is_flush(hand):
     #   return
-    if fullhouse(hand):
-        return 6
+    if is_straight(hand) and is_flush(hand):
+        return 8
     if four_kind(hand):
         return 7
+    if fullhouse(hand):
+        return 6
+    if is_flush(hand):
+        return 5
+    if is_straight(hand):
+        return 4
     if three_kind(hand):
         return 3
     if is_twopair(hand):
         return 2
     if is_onepair(hand):
         return 1
-    if is_straight(hand) and is_flush(hand):
-        return 8
-    if is_flush(hand):
-        return 5
-    if is_straight(hand):
-        return 4
+    
     return 0
 def poker(hands):
     '''
