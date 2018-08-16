@@ -32,7 +32,7 @@ def is_onepair(hand):
         l.append(rank_list.index(num))
         set1.add(rank_list.index(num))
     if len(set1) == 4:
-        print(l)
+        #print(l)
         for index in set1:
             if l.count(index) == 2:
                 return index/10
