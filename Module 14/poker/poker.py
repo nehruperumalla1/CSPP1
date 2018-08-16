@@ -3,8 +3,15 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-
 adict = {}
+def result(rank, hand):
+    global adict
+    if rank not in adict:
+        adict[rank] = [hand]
+    else:
+        adict[rank].append(hand)
+    print(adict)    
+    return adict  
 def func1(hand):
     '''Function call for one/two pair'''
     string = '--23456789TJQKA'
@@ -21,20 +28,8 @@ def func1(hand):
         #s = highcard(hand)
 def is_onepair(hand):
     '''Function for One pair'''
-    global adict
-    #set1 = func1(hand)
-    string = '--23456789TJQKA'
-    rank_list = [num for num in string]
-    #print(rank_list)
-    counter = []
-    set1 = set()
-    for num, _ in hand:
-        set1.add(rank_list.index(num))
-    for i in set1:
-        counter.append(rank_list.count(i))
-        if 2 in counter:
-            adict[pair] = i
-    print(adict)
+    #global adict
+    set1 = func1(hand)
     if len(set1) == 4:
         return True
     return False
@@ -140,6 +135,14 @@ def is_flush(hand):
         #     return False
     s = set(l)
     return len(s) == 1
+
+
+def high_card(hand):
+    set1 = func1(hand)
+    if len(set1) == 5:
+        return max(set1)
+    return 0
+
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -166,24 +169,33 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     # if is_straight(hand) and is_flush(hand):
     #   return
+
     if is_straight(hand) and is_flush(hand):
+        print(result(8, hand))
+        #print(adict)
         return 8
     if four_kind(hand):
+        result(7, hand)
         return 7
     if fullhouse(hand):
+        result(6, hand)
         return 6
     if is_flush(hand):
+        result(5, hand)
         return 5
     if is_straight(hand):
+        result(4, hand)
         return 4
     if three_kind(hand):
+        result(3, hand)
         return 3
     if is_twopair(hand):
+        result(2, hand)
         return 2
     if is_onepair(hand):
+        result(1, hand)
         return 1
-    
-    return 0
+    return high_card(hand)
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
