@@ -3,15 +3,15 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-# adict = {}
-# def result(rank, hand):
-#     global adict
-#     if rank not in adict:
-#         adict[rank] = [hand]
-#     else:
-#         adict[rank].append(hand)
-#     print(adict)    
-#     return adict  
+adict = {}
+def result(rank, hand):
+    global adict
+    if rank not in adict:
+        adict[rank] = [hand]
+    else:
+        adict[rank].append(hand)
+    print(adict)    
+    return adict
 def func1(hand):
     '''Function call for one/two pair'''
     string = '--23456789TJQKA'
@@ -21,17 +21,21 @@ def func1(hand):
     for num, _ in hand:
         set1.add(rank_list.index(num))
     return set1
-# def no_pair(hand):
-#     set1 = func1(hand)
-#     if len(set1) == 5:
-#         max(set1)
-        #s = highcard(hand)
 def is_onepair(hand):
     '''Function for One pair'''
-    #global adict
-    set1 = func1(hand)
+    string = '--23456789TJQKA'
+    rank_list = [num for num in string]
+    #print(rank_list)
+    set1 = set()
+    l = []
+    for num, _ in hand:
+        l.append(rank_list.index(num))
+        set1.add(rank_list.index(num))
     if len(set1) == 4:
-        return True
+        print(l)
+        for index in set1:
+            if l.count(index) == 2:
+                return index/10
     return False
 def is_twopair(hand):
     '''Function for twopair'''
@@ -136,7 +140,6 @@ def is_flush(hand):
     s = set(l)
     return len(s) == 1 
 
-
 def high_card(hand):
     set1 = func1(hand)
     if len(set1) == 5 and not is_flush(hand):
@@ -151,7 +154,6 @@ def hand_rank(hand):
         The first version should identify if the given hand is a straight
         or a flush or a straight flush.
     '''
-
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
     # Each card is coded as a 2 character string. Example Kind of Hearts is KH
@@ -169,31 +171,30 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     # if is_straight(hand) and is_flush(hand):
     #   return
-
     if is_straight(hand) and is_flush(hand):
-        #print(result(8, hand))
+        print(result(8, hand))
         #print(adict)
         return 8
     if four_kind(hand):
-        #result(7, hand)
+        result(7, hand)
         return 7
     if fullhouse(hand):
-        #result(6, hand)
+        result(6, hand)
         return 6
     if is_flush(hand):
-        #result(5, hand)
+        result(5, hand)
         return 5
     if is_straight(hand):
-        #result(4, hand)
+        result(4, hand)
         return 4
     if three_kind(hand):
-        #result(3, hand)
+        result(3, hand)
         return 3
     if is_twopair(hand):
-        #result(2, hand)
+        result(2, hand)
         return 2
-    if is_onepair(hand):
-        #result(1, hand)
+    return is_onepair(hand):
+        result(1, hand)
         return 1
     return high_card(hand)
 
@@ -216,8 +217,13 @@ def poker(hands):
     # hand_rank is a function passed to max
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
-    return max(hands, key=hand_rank)
-
+    res = list(map(hand_rank,hands))
+    print(res)
+    for i in res:
+        if res.count(i) > 1:
+            print(i)
+        res.remove(i)
+    #return max(hands, key=hand_rank)
 if __name__ == "__main__":
     # read the number of test cases
     COUNT = int(input())
