@@ -10,7 +10,7 @@
 #         adict[rank] = [hand]
 #     else:
 #         adict[rank].append(hand)
-#     print(adict)    
+#     print(adict)
 #     return adict
 def func1(hand):
     '''Function call for one/two pair'''
@@ -138,7 +138,7 @@ def is_flush(hand):
         # if hand[index][1] != hand[index+1][1]:
         #     return False
     set1 = set(list1)
-    return len(set1) == 1 
+    return len(set1) == 1
 
 def high_card(hand):
     ''' It returns the value of High Hand'''
