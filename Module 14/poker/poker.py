@@ -24,12 +24,6 @@ def is_twopair(hand):
     if len(set1) == 3:
         return True
     return False
-def diff(hand):
-    '''FUnction for 5 diff'''
-    set1 = func1(hand)
-    if len(set1) = 5:
-        return True
-    return False
 def three_four(hand):
     '''Function call for Three/four kind, full house'''
     length = len(hand)
@@ -156,23 +150,21 @@ def hand_rank(hand):
     # if is_straight(hand) and is_flush(hand):
     #   return
     if fullhouse(hand):
-        return 7
+        return 6
     if four_kind(hand):
-        return 6
+        return 7
     if three_kind(hand):
-        return 4
-    if is_twopair(hand):
         return 3
-    if is_onepair(hand):
+    if is_twopair(hand):
         return 2
-    if is_straight(hand) and is_flush(hand):
-        return 9
-    if is_flush(hand):
-        return 6
-    if is_straight(hand):
-        return 5
-    if diff(hand):
+    if is_onepair(hand):
         return 1
+    if is_straight(hand) and is_flush(hand):
+        return 8
+    if is_flush(hand):
+        return 5
+    if is_straight(hand):
+        return 4
     return 0
 def poker(hands):
     '''
