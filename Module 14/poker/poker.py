@@ -36,7 +36,7 @@ def is_onepair(hand):
         for index in set1:
             if l.count(index) == 2:
                 return index/10
-    return 100
+    return False
 def is_twopair(hand):
     '''Function for twopair'''
     set1 = func1(hand)
@@ -193,7 +193,7 @@ def hand_rank(hand):
     if is_twopair(hand):
         #result(2, hand)
         return 2
-    if is_onepair(hand) != 100:
+    if is_onepair(hand) not False:
         return is_onepair(hand)
         #result(1, hand)
     return high_card(hand)
