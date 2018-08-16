@@ -141,7 +141,7 @@ def high_card(hand):
     set1 = func1(hand)
     if len(set1) == 5:
         return max(set1)
-    return 0
+    return False
 
 def hand_rank(hand):
     '''
@@ -196,6 +196,8 @@ def hand_rank(hand):
         #result(1, hand)
         return 1
     return high_card(hand)
+
+    #return high_card(hand) and not (is_straight(hand) and is_flush(hand)) and not (four_kind(hand)) and not (fullhouse(hand))
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
