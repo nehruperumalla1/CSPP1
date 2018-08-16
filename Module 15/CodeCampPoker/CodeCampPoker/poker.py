@@ -3,6 +3,8 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
+
+
 def func1(hand):
     '''Function call for one/two pair'''
     string = '--23456789TJQKA'
@@ -12,6 +14,11 @@ def func1(hand):
     for num, _ in hand:
         set1.add(rank_list.index(num))
     return set1
+# def no_pair(hand):
+#     set1 = func1(hand)
+#     if len(set1) == 5:
+#         max(set1)
+        #s = highcard(hand)
 def is_onepair(hand):
     '''Function for One pair'''
     set1 = func1(hand)
@@ -45,15 +52,9 @@ def three_four(hand):
     yaarcopy = yaar.copy()
     counter = []
     jindex = 0
-    while jindex < len(yaar):
-        count = 0
-        temp = yaar[jindex]
-        for item in yaarcopy:
-            if temp == item:
-                count += 1
-        yaarcopy.remove(yaar[jindex])
-        counter.append(count)
-        jindex += 1
+    set1 = set(yaar)
+    for jindex in set1:
+        counter.append(yaar.count(jindex))
     return counter
 def three_kind(hand):
     '''Function for three kind'''
@@ -119,10 +120,13 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    for index in range(len(hand)-1):
-        if hand[index][1] != hand[index+1][1]:
-            return False
-    return True
+    l = []
+    for num,suite in hand:
+        l.append(suite)
+        # if hand[index][1] != hand[index+1][1]:
+        #     return False
+    s = set(l)
+    return len(s) == 1
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -149,9 +153,15 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     # if is_straight(hand) and is_flush(hand):
     #   return
-    if fullhouse(hand):
-        return 7
+    if is_straight(hand) and is_flush(hand):
+        return 8
     if four_kind(hand):
+        return 7
+    if fullhouse(hand):
+        return 6
+    if is_flush(hand):
+        return 5
+    if is_straight(hand):
         return 4
     if three_kind(hand):
         return 3
@@ -159,12 +169,7 @@ def hand_rank(hand):
         return 2
     if is_onepair(hand):
         return 1
-    if is_straight(hand) and is_flush(hand):
-        return 8
-    if is_flush(hand):
-        return 6
-    if is_straight(hand):
-        return 5
+    
     return 0
 def poker(hands):
     '''
