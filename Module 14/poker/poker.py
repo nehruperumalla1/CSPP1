@@ -34,7 +34,7 @@ def is_onepair(hand):
         counter.append(rank_list.count(i))
         if 2 in counter:
             adict[pair] = counter[i]
-    print(adict)
+    #print(adict)
     if len(set1) == 4:
         return True
     return False
