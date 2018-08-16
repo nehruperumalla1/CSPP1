@@ -4,7 +4,7 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 
-
+adict = {}
 def func1(hand):
     '''Function call for one/two pair'''
     string = '--23456789TJQKA'
@@ -21,7 +21,20 @@ def func1(hand):
         #s = highcard(hand)
 def is_onepair(hand):
     '''Function for One pair'''
-    set1 = func1(hand)
+    global adict
+    #set1 = func1(hand)
+    string = '--23456789TJQKA'
+    rank_list = [num for num in string]
+    #print(rank_list)
+    counter = []
+    set1 = set()
+    for num, _ in hand:
+        set1.add(rank_list.index(num))
+    for i in set1:
+        counter.append(rank_list.count(i))
+        if 2 in counter:
+            adict[pair] = counter[i]
+    print(adict)
     if len(set1) == 4:
         return True
     return False
