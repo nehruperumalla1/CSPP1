@@ -216,13 +216,13 @@ def poker(hands):
     # hand_rank is a function passed to max
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
-    res = list(map(hand_rank,hands))
-    print(res)
-    for i in res:
-        if res.count(i) > 1:
-            print(i)
-        res.remove(i)
-    #return max(hands, key=hand_rank)
+    # res = list(map(hand_rank,hands))
+    # print(res)
+    # for i in res:
+    #     if res.count(i) > 1:
+    #         print(i)
+    #     res.remove(i)
+    return max(hands, key=hand_rank)
 if __name__ == "__main__":
     # read the number of test cases
     COUNT = int(input())
