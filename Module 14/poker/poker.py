@@ -126,10 +126,13 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    for index in range(len(hand)):
-        if hand[index][1] != hand[index+1][1]:
-            return False
-    return True
+    l = []
+    for num,suite in hand:
+        l.append(suite)
+        # if hand[index][1] != hand[index+1][1]:
+        #     return False
+    s = set(l)
+    return len(s) == 1
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
