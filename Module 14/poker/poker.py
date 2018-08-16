@@ -134,13 +134,12 @@ def is_flush(hand):
         # if hand[index][1] != hand[index+1][1]:
         #     return False
     s = set(l)
-    return len(s) == 1
+    return len(s) == 1 
 
 
 def high_card(hand):
     set1 = func1(hand)
-    set2 = is_flush(hand)
-    if len(set1) == 5 and len(set2) != 5:
+    if len(set1) == 5 and not is_flush(hand):
         return max(set1)
     return False
 
