@@ -61,7 +61,7 @@ def three_four(hand):
         else:
             yaar.append(int(hand[index][0]))
     yaar.sort()
-    yaarcopy = yaar.copy()
+    #yaarcopy = yaar.copy()
     counter = []
     jindex = 0
     set1 = set(yaar)
@@ -132,12 +132,12 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    l = []
+    list1 = []
     for _, suite in hand:
-        l.append(suite)
+        list1.append(suite)
         # if hand[index][1] != hand[index+1][1]:
         #     return False
-    set1 = set(l)
+    set1 = set(list1)
     return len(set1) == 1 
 
 def high_card(hand):
