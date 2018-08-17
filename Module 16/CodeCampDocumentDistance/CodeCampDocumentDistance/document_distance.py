@@ -22,7 +22,7 @@ def similarity(dict1, dict2):
     newdict1 = format(dict1)
     #newdict2 = format(dict2)
     newdict1 = newdict1.strip().split()
-    #newdict2 = newdict2.strip().split()
+    newdict2 = newdict2.strip().split()
     adict1 = {}
     adict2 = {}
     list1=[]
