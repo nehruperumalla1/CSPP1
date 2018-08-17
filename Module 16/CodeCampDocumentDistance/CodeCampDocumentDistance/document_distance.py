@@ -48,9 +48,9 @@ def similarity(dict1, dict2):
             #print(adict2.keys)
             numerator.append(adict1[word] * adict2[word])
     for word in adict1:
-            denominator1.append(adict1[word]**2)
+        denominator1.append(adict1[word]**2)
     for word in adict2:
-            denominator2.append(adict2[word]**2)
+        denominator2.append(adict2[word]**2)
     numerator = sum(numerator)
     denominator = math.sqrt(sum(denominator1))*math.sqrt(sum(denominator2))
     return numerator/denominator
