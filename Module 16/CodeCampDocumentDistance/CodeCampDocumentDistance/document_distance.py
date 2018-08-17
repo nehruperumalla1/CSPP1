@@ -20,7 +20,7 @@ def similarity(dict1, dict2):
     '''
     # for word in
     newdict1 = format(dict1)
-    #newdict2 = format(dict2)
+    newdict2 = format(dict2)
     newdict1 = newdict1.strip().split()
     newdict2 = newdict2.strip().split()
     adict1 = {}
