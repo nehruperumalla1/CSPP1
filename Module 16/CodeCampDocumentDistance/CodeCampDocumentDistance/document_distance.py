@@ -4,12 +4,14 @@
 import re
 import math
 def delete_stopwords(adict):
+    '''Function for deleting stopwords'''
     stopwords = load_stopwords("stopwords.txt")
     for words in stopwords:
         if words in adict:
             del adict[words]
     return adict
-def format(adict):
+def formatdata(adict):
+    '''Formatting Data by eliminating special charcaters and number and spaces'''
     lower = adict.lower()
     form = re.sub('[^a-z\ ]', '', lower)
     return form
@@ -19,13 +21,12 @@ def similarity(dict1, dict2):
         Compute the document distance as given in the PDF
     '''
     # for word in
-    newdict1 = format(dict1)
-    newdict2 = format(dict2)
+    newdict1 = formatdata(dict1)
+    newdict2 = formatdata(dict2)
     newdict1 = newdict1.strip().split()
     newdict2 = newdict2.strip().split()
     adict1 = {}
     adict2 = {}
-    list1=[]
     for word1 in newdict1:
         if word1 not in adict1:
             adict1[word1] = 1
@@ -53,10 +54,6 @@ def similarity(dict1, dict2):
     numerator = sum(numerator)
     denominator = math.sqrt(sum(denominator1))*math.sqrt(sum(denominator2))
     return numerator/denominator
-    # for word 
-    #print(mul)
-    #print(sum(mul))
-
 def load_stopwords(stopwords):
     '''
         loads stop words from a file and returns a dictionary
