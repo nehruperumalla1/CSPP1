@@ -20,7 +20,6 @@ def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
-    # for word in
     newdict1 = formatdata(dict1)
     newdict2 = formatdata(dict2)
     newdict1 = newdict1.strip().split()
@@ -43,9 +42,7 @@ def similarity(dict1, dict2):
     denominator1 = []
     denominator2 = []
     for word in adict1:
-        #print(adict1)
         if word in adict2:
-            #print(adict2.keys)
             numerator.append(adict1[word] * adict2[word])
     for word in adict1:
         denominator1.append(adict1[word]**2)
