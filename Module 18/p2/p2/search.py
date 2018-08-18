@@ -48,7 +48,7 @@ def search(search_index, query):
                 res.append(search_index[qery][index][0])
 
 
-    res = set(res) 
+    res = set(res)
     print(res)
     return res
 
@@ -70,7 +70,6 @@ def main():
 
     # read the number of search queries
     lines = int(input())
-    
     # read the search queries into a list
     queries = []
     for i in range(lines):
