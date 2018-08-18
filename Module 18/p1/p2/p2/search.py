@@ -59,7 +59,7 @@ def process_queries(search_index, queries):
     '''
     for query in queries:
         searchresult = search(search_index, query)
-    	print(searchresult)
+        print(searchresult)
 
 def main():
     '''
