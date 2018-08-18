@@ -76,10 +76,10 @@ def build_search_index(docs):
         for jindex in doc:
             word_count = doc.count(jindex)
             if jindex in adict: 
-                if (index,word_count) not in adict[jindex]:
-                    adict[jindex].append((index,word_count))
+                if (index, word_count) not in adict[jindex]:
+                    adict[jindex].append((index, word_count))
             else:
-                adict[jindex] = [(index,word_count)]
+                adict[jindex] = [(index, word_count)]
         adict = delete_stopwords(adict)
 
     return adict
