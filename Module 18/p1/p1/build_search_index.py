@@ -20,7 +20,7 @@
         .
     }
 '''
-import 
+import re
 # helper function to load the stop words from a file
 def delete_stopwords(docs):
     s_words = load_stopwords('stopwords.txt')
@@ -33,7 +33,7 @@ def load_stopwords(filename):
         loads stop words from a file and returns a dictionary
     '''
     stopwords = []
-    with open(filename, 'r') as f_stopwords:
+    with open(filenam, 'r') as f_stopwords:
         for line in f_stopwords:
             stopwords.append(line.strip())
     return stopwords
