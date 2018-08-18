@@ -38,7 +38,7 @@ def search(search_index, query):
         make a set of doc_id and return
     '''
     # global res
-    #res = []
+    res = []
     query = query.split()
     #print(query)
     for qery in query:
@@ -47,7 +47,7 @@ def search(search_index, query):
             for index in range(len(search_index[qery])):
                 res.append(search_index[qery][index][0])
     res = set(res)
-    print(res)
+    #print(res)
 
     #doc_id = set(res) 
     #return res
