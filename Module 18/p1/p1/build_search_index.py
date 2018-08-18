@@ -33,7 +33,7 @@ def load_stopwords(filename):
         loads stop words from a file and returns a dictionary
     '''
     stopwords = []
-    with open(filenam, 'r') as f_stopwords:
+    with open(filename, 'r') as f_stopwords:
         for line in f_stopwords:
             stopwords.append(line.strip())
     return stopwords
@@ -47,7 +47,7 @@ def word_list(text):
     '''
     text = text.lower()
     # return text
-    newtext = re.sub('[^a-z\ ]', '',text)
+    newtext = re.sub('[^a-z ]', '',text)
     newtext = newtext.split()
     return newtext
 
