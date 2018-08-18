@@ -48,7 +48,7 @@ def word_list(text):
     '''
     text = text.lower()
     # return text
-    newtext = re.sub('[^a-z\ ]', '',text)
+    newtext = re.sub('[^a-z ]', '',text)
     newtext = newtext.split()
     return newtext
 
@@ -70,7 +70,8 @@ def build_search_index(docs):
 
     # return search index
     adict = {}
-    for index in range(len(docs)):
+    length = len(docs)
+    for index in range(length):
         doc = word_list(docs[index])
         for jindex in doc:
             word_count = doc.count(jindex)
