@@ -47,7 +47,7 @@ def search(search_index, query):
             for index in range(len(search_index[qery])):
                 res.append(search_index[qery][index][0])
     res = set(res)
-    #print(res)
+    print(res)
 
     #doc_id = set(res) 
     #return res
@@ -59,7 +59,7 @@ def process_queries(search_index, queries):
         print the results returned by search function
     '''
     for query in queries:
-        searchresult = search(search_index, query)
+        searchresult1 = search(search_index, query)
 
 def main():
     '''
