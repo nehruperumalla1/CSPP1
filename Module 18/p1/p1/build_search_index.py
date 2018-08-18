@@ -26,8 +26,8 @@ def delete_stopwords(docs):
     '''Function for deleting stop words'''
     s_words = load_stopwords('stopwords.txt')
     for s_word in s_words:
-      if s_word in docs:
-        del docs[s_word]
+        if s_word in docs:
+            del docs[s_word]
     return docs
 def load_stopwords(filename):
     '''
