@@ -27,7 +27,7 @@ def delete_stopwords(docs):
     s_words = load_stopwords('stopwords.txt')
     for s_word in s_words:
       if s_word in docs:
-          del docs[s_word]
+        del docs[s_word]
     return docs
 def load_stopwords(filename):
     '''
@@ -48,7 +48,7 @@ def word_list(text):
     '''
     text = text.lower()
     # return text
-    newtext = re.sub('[^a-z ]', '',text)
+    newtext = re.sub('[^a-z ]', '', text)
     newtext = newtext.split()
     return newtext
 
@@ -75,7 +75,7 @@ def build_search_index(docs):
         doc = word_list(docs[index])
         for jindex in doc:
             word_count = doc.count(jindex)
-            if jindex in adict: 
+            if jindex in adict:
                 if (index, word_count) not in adict[jindex]:
                     adict[jindex].append((index, word_count))
             else:
