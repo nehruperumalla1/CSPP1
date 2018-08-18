@@ -23,6 +23,7 @@
 import re
 # helper function to load the stop words from a file
 def delete_stopwords(docs):
+	'''Function for deleting stop words'''
     s_words = load_stopwords('stopwords.txt')
     for s_word in s_words:
       if s_word in docs:
@@ -81,10 +82,6 @@ def build_search_index(docs):
         adict = delete_stopwords(adict)
 
     return adict
-
-
-    pass
-
 # helper function to print the search index
 # use this to verify how the search index looks
 def print_search_index(index):
