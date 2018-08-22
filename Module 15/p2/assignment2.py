@@ -264,10 +264,8 @@ def decrypt_story():
     ''' Decrypt the story text using CiphertextMessage class and return the
         shift value and decrypted string in a tuple.
     '''
-    decrypt = CipherTextMessage(get_story_string())
+    decrypt = CiphertextMessage(get_story_string())
     return decrypt.decrypt_message()
-    pass #delete this line when you write your code.
-
 ### DO NOT MODIFY THIS METHOD ###
 def main():
     ''' This method is provided to handle testcases'''
