@@ -21,6 +21,7 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
+
     matsum = copy.deepcopy(m1)
     for index in range(len(m1)):
         for jindex in range(len(m2)):
@@ -39,7 +40,7 @@ def read_matrix(matlen):
     roww = []
     for index in range(matlen[0]):
         row = input()
-        print(row)
+        #print(row)
         row = list(map(int, row.split(' ')))
         roww.append(row)
     if matlen[0] != len(roww):
