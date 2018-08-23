@@ -37,8 +37,9 @@ def read_matrix(matlen):
         error message should be "Error: Invalid input for the matrix"
     '''
     roww = []
-    for index in range(matlen[1]):
+    for index in range(matlen[0]):
         row = input()
+        print(row)
         row = list(map(int, row.split(' ')))
         roww.append(row)
     if matlen[0] != len(roww):
