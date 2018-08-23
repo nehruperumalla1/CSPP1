@@ -19,7 +19,7 @@ def mult_matrix(matrix1, matrix2):
                 for kindex in range(len(matrix2)):
                     sum1 += matrix1[index][kindex] * matrix2[kindex][jindex]
                 mat.append(sum1)
-        matmul.append(m)
+        matmul.append(mat)
     return mat
 def add_matrix(matrix1, matrix2):
     '''
