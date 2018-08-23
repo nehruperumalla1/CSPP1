@@ -1,3 +1,4 @@
+'''Matrix Multiplication and Addition'''
 import copy
 def mult_matrix(matrix1, matrix2):
     '''
