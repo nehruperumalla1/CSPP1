@@ -56,10 +56,10 @@ def read_matrix(matlen):
         row = list(map(int, row.split(' ')))
         roww.append(row)
     if matlen[0] != len(roww):
-        return False
+        return True
     for index in roww:
         if len(index) != matlen[1]:
-            return False
+            return True
     return roww
 # def input_format(matrix, matrixlst):
 
