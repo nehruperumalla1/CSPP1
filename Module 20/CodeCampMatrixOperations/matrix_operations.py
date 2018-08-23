@@ -9,8 +9,9 @@ def mult_matrix(m1, m2):
     '''
     matmul = copy.deepcopy(m1)
     for index in range(len(m1)):
-        for jindex in range(len(m2)):
-            matmul[index][jindex] = m1[index][jindex]*m2[index][jindex]
+    	for jindex in range(len(m2[0])):
+    		for kindex in range(len(m2)):
+    			matmul[index][jindex] = m1[index][kindex] * m2[kindex][jindex]
     return matmul
 
 def add_matrix(m1, m2):
