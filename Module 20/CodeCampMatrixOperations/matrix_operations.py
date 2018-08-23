@@ -14,7 +14,7 @@ def mult_matrix(m1, m2):
     for index in range(len(m1)):
     	for jindex in range(len(m2[0])):
     		for kindex in range(len(m2)):
-    			# matmul[index][jindex] = 0
+    			matmul[index][jindex] = 0
     			matmul[index][jindex] += m1[index][kindex] * m2[kindex][jindex]
     return matmul
 
