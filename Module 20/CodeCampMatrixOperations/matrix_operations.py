@@ -61,6 +61,7 @@ def read_matrix(matlen):
 # def input_format(matrix, matrixlst):
 
 def main():
+    '''Main Function for Matrices'''
     # read matrix 1
     matlen1 = input()
     matlen1 = list(map(int, matlen1.split(',')))
