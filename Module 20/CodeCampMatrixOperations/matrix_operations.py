@@ -20,7 +20,7 @@ def mult_matrix(matrix1, matrix2):
                     sum1 += matrix1[index][kindex] * matrix2[kindex][jindex]
                 mat.append(sum1)
         matmul.append(mat)
-    return mat
+    return matmul
 def add_matrix(matrix1, matrix2):
     '''
         check if the matrix shapes are similar
