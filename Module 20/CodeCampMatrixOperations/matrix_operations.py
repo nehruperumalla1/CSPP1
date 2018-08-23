@@ -31,7 +31,7 @@ def add_matrix(m1, m2):
     	return None
     matsum = copy.deepcopy(m1)
     for index in range(len(m1)):
-        for jindex in range(len(m2)):
+        for jindex in range(len(m2[0])):
             matsum[index][jindex] += m2[index][jindex]
 
     return matsum
