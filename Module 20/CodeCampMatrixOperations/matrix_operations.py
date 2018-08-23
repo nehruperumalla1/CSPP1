@@ -13,9 +13,10 @@ def mult_matrix(matrix1, matrix2):
         return None
     matmul = []
     matlen1 = len(matrix1)
+    matlen2 = len(matrix2[0])
     for index in range(matlen1):
         mat = []
-        for jindex in range(len(matrix2[0])):
+        for jindex in range(matlen2):
             sum1 = 0
             for kindex in range(len(matrix2)):
                 sum1 += matrix1[index][kindex] * matrix2[kindex][jindex]
