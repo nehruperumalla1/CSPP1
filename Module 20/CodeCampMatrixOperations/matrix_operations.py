@@ -11,13 +11,18 @@ def mult_matrix(m1, m2):
     	print("Error: Matrix shapes invalid for mult")
     	return None
     matmul = copy.deepcopy(m1)
+    mat = []
     for index in range(len(m1)):
+    	m = []
     	for jindex in range(len(m2[0])):
-    			matmul[index][jindex] = 0
+    			# matmul[index][jindex] = 0
+    			sum =0
     			for kindex in range(len(m2)):
-    				matmul[index][jindex] += m1[index][kindex] * m2[kindex][jindex]
-    return matmul
+    				sum+= m1[index][kindex] * m2[kindex][jindex]
+    			m.append(sum)
+    	mat.append(m)
 
+    return mat
 def add_matrix(m1, m2):
     '''
         check if the matrix shapes are similar
@@ -33,7 +38,6 @@ def add_matrix(m1, m2):
     for index in range(len(m1)):
         for jindex in range(len(m2[0])):
             matsum[index][jindex] += m2[index][jindex]
-
     return matsum
 
 def read_matrix(matlen):
