@@ -15,11 +15,10 @@ def mult_matrix(matrix1, matrix2):
     for index in range(len(matrix1)):
         mat = []
         for jindex in range(len(matrix2[0])):
-                # matmul[index][jindex] = 0
-                sum1 = 0
-                for kindex in range(len(matrix2)):
-                    sum1 += matrix1[index][kindex] * matrix2[kindex][jindex]
-                mat.append(sum1)
+            sum1 = 0
+            for kindex in range(len(matrix2)):
+                sum1 += matrix1[index][kindex] * matrix2[kindex][jindex]
+            mat.append(sum1)
         matmul.append(mat)
     return matmul
 def add_matrix(matrix1, matrix2):
