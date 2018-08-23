@@ -60,8 +60,6 @@ def main():
     if matrix1 == None or matrix2 == None:
         print("Error: Invalid input for the matrix")
     else:
-        print(matrix1)
-        print(matrix2)
         matrix_add = add_matrix(matrix1, matrix2)
         print(matrix_add)
         matrix_mult = mult_matrix(matrix1, matrix2)
