@@ -56,10 +56,10 @@ def read_matrix(matlen):
         row = list(map(int, row.split(' ')))
         roww.append(row)
     if matlen[0] != len(roww):
-        return True
+        return None
     for index in roww:
         if len(index) != matlen[1]:
-            return True
+            return None
     return roww
 # def input_format(matrix, matrixlst):
 
@@ -72,7 +72,7 @@ def main():
     matlen2 = input()
     matlen2 = list(map(int, matlen2.split(',')))
     matrix2 = read_matrix(matlen2)
-    if matrix1 and matrix2:
+    if matrix1 == None or matrix2 == None:
         print("Error: Invalid input for the matrix")
     else:
         matrix_add = add_matrix(matrix1, matrix2)
