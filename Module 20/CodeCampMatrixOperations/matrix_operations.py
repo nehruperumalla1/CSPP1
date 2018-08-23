@@ -22,8 +22,8 @@ def add_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     if len(m1)!=len(m2):
-    	return "Error: Matrix shapes invalid for addition"
-
+    	print("Error: Matrix shapes invalid for addition")
+    	return None
     matsum = copy.deepcopy(m1)
     for index in range(len(m1)):
         for jindex in range(len(m2)):
