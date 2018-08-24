@@ -133,9 +133,9 @@ class Message(object):
 ### Paste your implementation of the `PlaintextMessage` class here
 class PlaintextMessage():
 	'''Plain Text Message Class'''
-	def __init__(self, txt, shft):
-		self.text = txt
-		self.shift = shft
+	def __init__(self, text, shift):
+		self.text = text
+		self.shift = shift
 		self.valid_words = load_words("words.txt")
 		message = Message(text)
 		self.encrypting_dict = message.build_shift_dict(shift)
