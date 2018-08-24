@@ -1,4 +1,8 @@
 # def checking_win(sett):
+def looping(seti):
+    if 'x' in seti:
+        return 'x'
+    return 'o'
 
 def game_play(game):
     x = 'x'
@@ -47,9 +51,7 @@ def game_play(game):
 
 
         if len(set1) == 1:
-            if 'x' in set1:
-                return 'x'
-            return 'o'
+            return looping(set1)
         if len(set2) == 1:
             if 'x' in set2:
                 return 'x'
@@ -67,6 +69,9 @@ def game_play(game):
                 return 'x'
             return 'o'
         return "draw"
+def validity_check(game):
+
+
 def main():
 
     row = []
@@ -74,6 +79,7 @@ def main():
         column = input()
         column = list(map(str, column.split(' ')))
         row.append(column)
+
     row = game_play(row)
     print(row)
 if __name__ == '__main__':
