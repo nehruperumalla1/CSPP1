@@ -149,8 +149,8 @@ class PlainTextMessage():
 		return self.message_text_encrypted
 	def change_shift(self, shift):
 		self.shift = shift
-		message = Messag(self.text)
-		self.encrypting_dict = message.build_shift_dict(shift)
+		message = Message(self.text)
+		self.encrypting_dict  message.build_shift_dict(shift)
 		self.message_text_encrypted = message.apply_shift(shift)
 def main():
     ''' Function to handle testcases '''
