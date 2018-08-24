@@ -66,6 +66,7 @@ def validity_check(game):
         return game_play(game)
 
 def main():
+    '''Main function for playing game'''
     row = []
     for index in range(3):
         column = input()
