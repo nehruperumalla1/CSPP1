@@ -63,8 +63,7 @@ def validity_check(game):
         return "invalid input"
     if abs(xcount - ocount) != 1:
         return "invalid game"
-    else:
-        return game_play(game)
+    return game_play(game)
 
 def main():
     '''Main function for playing game'''
