@@ -53,21 +53,13 @@ def game_play(game):
         if len(set1) == 1:
             return looping(set1)
         if len(set2) == 1:
-            if 'x' in set2:
-                return 'x'
-            return 'o'
+            return looping(set2)
         if len(set3) == 1:
-            if 'x' in set3:
-                return 'x'
-            return 'o'
+            return looping(set3)
         if len(set4) == 1:
-            if 'x' in set4:
-                return 'x'
-            return 'o'
+            return looping(set4)
         if len(set5) == 1:
-            if 'x' in set5:
-                return 'x'
-            return 'o'
+            return looping(set5)
         return "draw"
 # def validity_check(game):
 
