@@ -43,8 +43,8 @@ def game_play(game):
 
 def validity_check(game):
     '''Validating the players' input and game'''
-    x = 'x'
-    o = 'o'
+    x_element = 'x'
+    o_element = 'o'
     xcount = 0
     ocount = 0
     countt = 0
@@ -53,10 +53,10 @@ def validity_check(game):
         if len(index) != 3:
             # print("Invalid")
             return "invalid game"
-        if x in index:
-            xcount += index.count(x)
-        if o in index:
-            ocount += index.count(o)
+        if x_element in index:
+            xcount += index.count(x_element)
+        if o_element in index:
+            ocount += index.count(o_element)
         if '.' in index:
             countt += index.count('.')
     if xcount+ocount+countt != 9:
