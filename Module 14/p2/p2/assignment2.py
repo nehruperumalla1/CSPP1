@@ -134,6 +134,7 @@ class Message(object):
 class PlaintextMessage():
     '''Plain Text Message Class'''
     def __init__(self, text, shift):
+        '''Constructor'''
         self.text = text
         self.shift = shift
         self.valid_words = load_words("words.txt")
@@ -142,12 +143,16 @@ class PlaintextMessage():
         self.message_text_encrypted = message.apply_shift(shift)
 
     def get_shift(self):
+        '''get the shift method'''
         return self.shift
     def get_encrypting_dict(self):
+        '''get the encrypting method'''
         return self.encrypting_dict
     def get_message_text_encrypted(self):
+        '''msg encrypt method'''
         return self.message_text_encrypted
     def change_shift(self, shift):
+        '''Method to change the shift'''
         self.shift = shift
         message = Message(self.text)
         self.encrypting_dict = message.build_shift_dict(shift)
