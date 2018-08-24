@@ -14,7 +14,7 @@ def game_play(game):
     set5 = set()
     length = len(game)
     for i in range(length):
-        for j in range(length[i]):
+        for j in range(len(game[i])):
             if i == j:
                 set1.add(game[i][j])
             if i + j == (len(game)-1):
