@@ -131,7 +131,7 @@ class Message(object):
 
 
 ### Paste your implementation of the `PlaintextMessage` class here
-class PlainTextMessage():
+class PlaintextMessage():
 	'''Plain Text Message Class'''
 	def __init__(self, txt, shft):
 		self.text = txt
