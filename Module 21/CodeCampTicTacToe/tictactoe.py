@@ -69,7 +69,7 @@ def validity_check(game):
 def main():
     '''Main function for playing game'''
     row = []
-    for index in range(3):
+    for _ in range(3):
         column = input()
         column = list(map(str, column.split(' ')))
         row.append(column)
