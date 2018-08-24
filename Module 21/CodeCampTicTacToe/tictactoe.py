@@ -69,7 +69,7 @@ def game_play(game):
                 return 'x'
             return 'o'
         return "draw"
-def validity_check(game):
+# def validity_check(game):
 
 
 def main():
