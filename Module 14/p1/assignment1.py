@@ -61,7 +61,7 @@ def load_words(file_name):
     in_file.close()
     return word_list
 
-WORDLIST_FILENAME = 'words.txt'
+WORDLIST_FILENAME = 'words.txt
 class Message:
 	def __init__(self, text):
 		self.message_text = text
