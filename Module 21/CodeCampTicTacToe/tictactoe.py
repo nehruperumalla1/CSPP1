@@ -5,27 +5,7 @@ def looping(seti):
     return 'o'
 
 def game_play(game):
-    x = 'x'
-    o = 'o'
-    xcount = 0
-    ocount = 0
-    countt = 0
-    for index in game:
-        # print("Invalid")
-        if len(index) != 3:
-            # print("Invalid")
-            return "invalid game"
-        if x in index:
-            xcount += index.count(x)
-        if o in index:
-            ocount += index.count(o)
-        if '.' in index:
-            countt += index.count('.')
-    if xcount+ocount+countt != 9:
-        return "invalid input"
-    if abs(xcount - ocount) != 1:
-        return "invalid game"
-    else:
+    
         set1 = set()
         set2 = set()
         set3 = set()
@@ -48,8 +28,6 @@ def game_play(game):
                     set4.add(game[i][j])
                 if j == 2:
                     set5.add(game[i][j])
-
-
         if len(set1) == 1:
             return looping(set1)
         if len(set2) == 1:
@@ -61,7 +39,30 @@ def game_play(game):
         if len(set5) == 1:
             return looping(set5)
         return "draw"
-# def validity_check(game):
+def validity_check(game):
+    x = 'x'
+    o = 'o'
+    xcount = 0
+    ocount = 0
+    countt = 0
+    for index in game:
+        # print("Invalid")
+        if len(index) != 3:
+            # print("Invalid")
+            return "invalid game"
+        if x in index:
+            xcount += index.count(x)
+        if o in index:
+            ocount += index.count(o)
+        if '.' in index:
+            countt += index.count('.')
+    if xcount+ocount+countt != 9:
+        return "invalid input"
+    if abs(xcount - ocount) != 1:
+        return "invalid game"
+    else:
+        return game_play(game)
+
 
 
 def main():
@@ -71,8 +72,7 @@ def main():
         column = input()
         column = list(map(str, column.split(' ')))
         row.append(column)
-
-    row = game_play(row)
+    row = validity_check(row)
     print(row)
 if __name__ == '__main__':
     main()
