@@ -7,11 +7,7 @@ def looping(seti):
 
 def game_play(game):
     '''Checking the game winner'''
-    set1 = set()
-    set2 = set()
-    set3 = set()
-    set4 = set()
-    set5 = set()
+    set1, set2, set3, set4, set5 = set(), set(), set(), set(), set()
     for i in range(len(game)):
         for j in range(len(game[i])):
             if i == j:
