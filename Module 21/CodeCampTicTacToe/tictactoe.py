@@ -41,7 +41,6 @@ def game_play(game):
     if len(set5) == 1:
         return looping(set5)
     return "draw"
-    return None
 
 def validity_check(game):
     '''Validating the players' input and game'''
