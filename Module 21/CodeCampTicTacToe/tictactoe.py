@@ -13,9 +13,8 @@ def game_play(game):
     set4 = set()
     set5 = set()
     length = len(game)
-    lengthind = len(game[i])
     for i in range(length):
-        for j in range(lengthind):
+        for j in range(length[i]):
             if i == j:
                 set1.add(game[i][j])
             if i + j == (len(game)-1):
