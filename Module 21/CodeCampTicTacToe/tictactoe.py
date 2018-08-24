@@ -18,7 +18,7 @@ def game_play(game):
 		if '.' in index:
 			countt += index.count('.')
 	if xcount+ocount+countt != 9:
-		return "invalid game"
+		return "invalid input"
 	if abs(xcount - ocount) != 1:
 		return "invalid game"
 	else:
@@ -33,8 +33,9 @@ def game_play(game):
 					set1.add(game[i][j])
 				if i + j == (len(game)-1):
 					set2.add(game[i][j])
-				if set(game[i]) == 1:
-					if 'x' in set(game[i]):
+				sett = set(game[i])
+				if len(sett) == 1:
+					if 'x' in sett:
 						return 'x'
 					return 'o'
 				if j == 0:
