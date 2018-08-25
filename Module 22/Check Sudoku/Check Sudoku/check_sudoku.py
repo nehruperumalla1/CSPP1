@@ -21,7 +21,7 @@ def check_sudoku(sudoku):
         rule1 = False
         if len(set(index)) == 9:
             rule1 = True
-            print(rule1)
+            # print(rule1)
             count1 += 1
     set1 = set()
     for iindex in range(len(sudoku)):
