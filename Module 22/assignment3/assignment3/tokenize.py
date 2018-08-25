@@ -18,7 +18,7 @@ def tokenize(string):
     return adict   
 def main():
     lines = int(input())
-    for index in range(lines):
+    for _ in range(lines):
         line = input()
         string = tokenize(line)
     print(string)
