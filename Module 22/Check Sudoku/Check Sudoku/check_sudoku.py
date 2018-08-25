@@ -16,9 +16,12 @@ def check_sudoku(sudoku):
     rule1 = False
     rule2 = True
     count = 0
+    count1 = 0
     for index in sudoku:
+        rule1 = False
         if len(set(index)) == 9:
             rule1 = True
+            count1 += 1
     set1 = set()
     for iindex in range(len(sudoku)):
         count = 0
@@ -28,7 +31,7 @@ def check_sudoku(sudoku):
                     set1.add(sudoku[iindex][jindex])
                     if len(set1) == 9:
                         count += 1
-    if rule1 and count == 9:
+    if count1 == 9 and count == 9:
         return True
     else:
         return False
