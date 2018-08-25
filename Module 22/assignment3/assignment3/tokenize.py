@@ -5,6 +5,7 @@ each word
 import re
 adict = {}
 def tokenize(string):
+    '''Token'''
     global adict
     string = re.sub('[^A-z,0-9 ]', ' ', string)
     string = string.split()
@@ -17,6 +18,7 @@ def tokenize(string):
             del adict[',']
     return adict   
 def main():
+    '''Man'''
     lines = int(input())
     for _ in range(lines):
         line = input()
