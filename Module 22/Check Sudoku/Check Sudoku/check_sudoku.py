@@ -7,7 +7,6 @@
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
 '''
-
 def check_sudoku(sudoku):
     '''
         Your solution goes here. You may add other helper functions as needed.
@@ -26,15 +25,46 @@ def check_sudoku(sudoku):
     set1 = set()
     for iindex in range(len(sudoku)):
         for jindex in range(len(sudoku[iindex])):
-            for val in range(9):
-                if jindex == val:
-                    # print(val)
-                    set1.add(sudoku[iindex][jindex])
-                    if len(set1) == 9:
-                        # print(len(set1))
-                        count += 1
+            if jindex == 0:
+                set1.add(sudoku[iindex][jindex])
+                if len(set1) == 9:
+                    count += 1
+            if jindex == 1:
+                set1.add(sudoku[iindex][jindex])
+                if len(set1) == 9:
+                    count += 1
+            if jindex == 2:
+                set1.add(sudoku[iindex][jindex])
+                if len(set1) == 9:
+                    count += 1
+            if jindex == 3:
+                set1.add(sudoku[iindex][jindex])
+                if len(set1) == 9:
+                    count += 1
+            if jindex == 4:
+                set1.add(sudoku[iindex][jindex])
+                if len(set1) == 9:
+                    count += 1
+            if jindex == 5:
+                set1.add(sudoku[iindex][jindex])
+                if len(set1) == 9:
+                    count += 1
+            if jindex == 6:
+                set1.add(sudoku[iindex][jindex])
+                if len(set1) == 9:
+                    count += 1
+            if jindex == 7:
+                set1.add(sudoku[iindex][jindex])
+                if len(set1) == 9:
+                    count += 1
+            if jindex == 8:
+                set1.add(sudoku[iindex][jindex])
+                if len(set1) == 9:
+                    count += 1
+
+                    
     # print(count)
-    if count1 == 9 and (count == 9 or count == 73):
+    if count1 == 9 and count == 9:
         return True
     else:
         return False
