@@ -13,15 +13,11 @@ def check_sudoku(sudoku):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    rule1 = False
-    rule2 = True
     count = 0
     count1 = 0
     for index in sudoku:
         rule1 = False
         if len(set(index)) == 9:
-            rule1 = True
-            # print(rule1)
             count1 += 1
     set1 = set()
     for iindex in range(len(sudoku)):
@@ -34,7 +30,7 @@ def check_sudoku(sudoku):
                         # print(len(set1))
                         count += 1
     # print(count)
-    if count1 == 9 and count == 9:
+    if count1 == 9 or count == 9:
         return True
     else:
         return False
