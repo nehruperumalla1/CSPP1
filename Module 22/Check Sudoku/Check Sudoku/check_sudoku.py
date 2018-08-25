@@ -16,7 +16,6 @@ def check_sudoku(sudoku):
     count = 0
     count1 = 0
     for index in sudoku:
-        rule1 = False
         if len(set(index)) == 9:
             count1 += 1
     set1 = set()
@@ -32,8 +31,7 @@ def check_sudoku(sudoku):
     # print(count)
     if count1 == 9 and count == 9:
         return True
-    else:
-        return False
+    return False
 
 def main():
     '''
@@ -44,7 +42,7 @@ def main():
     sudoku = []
 
     # loop to read 9 lines of input from console
-    for i in range(9):
+    for _ in range(9):
         # read a line, split it on SPACE and append row to list
         row = input().split(' ')
         #print(row)
