@@ -5,13 +5,13 @@ frequency of each word. Display the frequency values using “#” as a text bas
 
 def frequency_graph(dictionary):
     '''Printing Frequency'''
-    x = '#'
+    letter = '#'
     for index in sorted(dictionary.keys()):
-        for jindex in range(dictionary[index]):
+        for _ in range(dictionary[index]):
             if isinstance(dictionary[index], int):
-                dictionary[index] = x
+                dictionary[index] = letter
             else:
-                dictionary[index] += x
+                dictionary[index] += letter
         print(index, '-', dictionary[index])
 
 def main():
