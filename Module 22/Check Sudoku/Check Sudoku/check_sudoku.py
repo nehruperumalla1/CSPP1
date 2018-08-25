@@ -17,20 +17,21 @@ def check_sudoku(sudoku):
     rule2 = True
     count = 0
     for index in sudoku:
-    	if len(set(index)) == 9:
-    		rule1 = True
+        if len(set(index)) == 9:
+            rule1 = True
     set1 = set()
     for iindex in range(len(sudoku)):
-    	for jindex in range(len(sudoku[iindex])):
-    		for val in range(9):
-    			if jindex == val:
-    				set1.add(sudoku[iindex][jindex])
-    				if len(set1) == 9:
-    					count += 1
+        count = 0
+        for jindex in range(len(sudoku[iindex])):
+            for val in range(9):
+                if jindex == val:
+                    set1.add(sudoku[iindex][jindex])
+                    if len(set1) == 9:
+                        count += 1
     if rule1 and count == 9:
-    	return True
+        return True
     else:
-    	return False
+        return False
 
 def main():
     '''
