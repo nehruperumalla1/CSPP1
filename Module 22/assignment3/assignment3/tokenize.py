@@ -6,7 +6,7 @@ import re
 adict = {}
 def tokenize(string):
 	global adict
-	string = re.sub('[^A-z,1-9 ]', '', string)
+	string = re.sub('[^A-z,0-9 ]', '', string)
 	string = string.split()
 	for index in string:
 		if index not in adict:
