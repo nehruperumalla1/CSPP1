@@ -25,7 +25,6 @@ def check_sudoku(sudoku):
             count1 += 1
     set1 = set()
     for iindex in range(len(sudoku)):
-        count = 0
         for jindex in range(len(sudoku[iindex])):
             for val in range(9):
                 if jindex == val:
