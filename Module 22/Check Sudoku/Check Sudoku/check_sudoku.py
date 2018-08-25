@@ -33,7 +33,7 @@ def check_sudoku(sudoku):
                     if len(set1) == 9:
                         # print(len(set1))
                         count += 1
-    print(count)
+    # print(count)
     if count1 == 9 and (count == 9 or count == 73):
         return True
     else:
