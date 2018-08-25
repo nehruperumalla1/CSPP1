@@ -6,13 +6,15 @@ import re
 adict = {}
 def tokenize(string):
 	global adict
-	string = re.sub('[^A-z,0-9 ]', '', string)
+	string = re.sub('[^A-z,0-9 ]', ' ', string)
 	string = string.split()
 	for index in string:
 		if index not in adict:
 			adict[index] = 1
 		else:
 			adict[index] += 1
+		if ',' in adict:
+			del adict[',']
 	return adict   
 def main():
 	lines = int(input())
