@@ -20,8 +20,9 @@ def check_sudoku(sudoku):
         if len(set(index)) == 9:
             count1 += 1
     set1 = set()
-    for iindex in range(len(sudoku)):
-        for jindex in range(len(sudoku[iindex])):
+    length = len(sudoku)
+    for iindex in range(length):
+        for jindex in range(length[iindex])):
             for val in range(9):
                 if jindex == val:
                     # print(val)
