@@ -7,31 +7,6 @@
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
 '''
-
-# def check_sudoku(sudoku):
-#     '''
-#         Your solution goes here. You may add other helper functions as needed.
-#         The function has to return True for a valid sudoku grid and false otherwise
-#     '''
-#     count = 0
-#     count1 = 0
-#     for index in sudoku:
-#         if len(set(index)) == 9:
-#             count1 += 1
-#     set1 = set()
-#     for iindex in range(len(sudoku)):
-#         for jindex in range(len(sudoku[iindex])):
-#             for val in range(9):
-#                 if jindex == val:
-#                     # print(val)
-#                     set1.add(sudoku[iindex][jindex])
-#                     if len(set1) == 9:
-#                         # print(len(set1))
-#                         count += 1
-#     # print(count)
-#     if count1 == 9 and count == 9:
-#         return True
-#     return False
 def check_col(sudoku):
     '''
     Function to check columns
